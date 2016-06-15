@@ -1,3 +1,2 @@
-rootProject.name = 'AwesomeProject'
-
-include ':app', ':ReactAndroid'
+rootProject.name = 'RNAppProject'
+include ':app'
