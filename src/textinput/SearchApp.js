@@ -40,4 +40,4 @@ var styles = StyleSheet.create({
 
 // module.exports = SearchApp;
 
-AppRegistry.registerComponent('AwesomeProject',() => SearchApp);
+AppRegistry.registerComponent('RNAppProject',() => SearchApp);

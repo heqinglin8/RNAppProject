@@ -8,6 +8,7 @@ var {
   Text,
   Image,
   StyleSheet,
+    ToastAndroid,
 } = React;
 var images = [
   'http://a.hiphotos.baidu.com/image/pic/item/7dd98d1001e9390191637f187eec54e736d196b7.jpg',
@@ -60,7 +61,10 @@ var ImageScoll = React.createClass({
       this.setState({
         index:index
       });
-    }
+    }else{
+		// alert('已经是第一张了');
+      ToastAndroid.show('已经是第一张了',ToastAndroid.LONG);
+	}
   },
   next:function(){
     var index = this.state.index;
@@ -70,7 +74,10 @@ var ImageScoll = React.createClass({
       this.setState({
         index:index
       });
-    }
+    }else{
+		// alert('已经是最后一张了');
+      ToastAndroid.show('已经是最后一张了',ToastAndroid.LONG);
+	}
   },
 
 });
