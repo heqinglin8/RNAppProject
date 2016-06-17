@@ -21,7 +21,7 @@ var images = [
   'http://pic94.nipic.com/file/20160409/11748973_165443493001_2.jpg',
   'http://pic94.nipic.com/file/20160409/11748973_103545564000_2.jpg',
 ];
-var imgurl = 'http://a.hiphotos.baidu.com/image/pic/item/7dd98d1001e9390191637f187eec54e736d196b7.jpg';
+
 var ImageScoll = React.createClass({
 
   getInitialState:function(){
@@ -62,7 +62,7 @@ var ImageScoll = React.createClass({
         index:index
       });
     }else{
-		// alert('已经是第一张了');
+		alert('已经是第一张了');
       ToastAndroid.show('已经是第一张了',ToastAndroid.LONG);
 	}
   },
