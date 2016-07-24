@@ -8,15 +8,34 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  ToastAndroid,
+  Image,
 } from 'react-native';
 
 class CarDetail extends Component {
+   constructor(props) {
+        super(props);
+        const { navigator } = this.props;
+        this.state = {
+            id: 2,
+            rowData: this.props.data
+        };
+    }
+
+    componentDidMount() {
+        //这里获取从FirstPageComponent传递过来的参数: id,{rowData.seriesname}
+        this.setState({
+            rowData: this.props.data
+        });
+    }
   render() {
+    var rowData = this.state.rowData;
     return (
       <View style={styles.container}>
+       <Image source={{uri: rowData.img}} style = {styles.bigImage} />
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          {rowData.seriesname}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
@@ -46,6 +65,11 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  bigImage:{
+    justifyContent: 'center',
+    width: 200, 
+    height: 200,
+  },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => CarDetail);
+module.exports=CarDetail;

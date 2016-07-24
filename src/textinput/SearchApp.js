@@ -38,6 +38,6 @@ var styles = StyleSheet.create({
 
 });
 
-// module.exports = SearchApp;
+ module.exports = SearchApp;
 
-AppRegistry.registerComponent('RNAppProject',() => SearchApp);
+//AppRegistry.registerComponent('RNAppProject',() => SearchApp);

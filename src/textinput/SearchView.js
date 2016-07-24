@@ -21,9 +21,8 @@ var SearchView = React.createClass({
      return (
     <View>
           <View style = {[styles.cotainer]}>
-             <View style = {styles.flex}>
+             <View style = {[styles.input,styles.flex]}>
                  <TextInput
-                 style = {styles.input}
                  returnKeyType='search'
                  placeholder='请输入你要查询的内容'
                  onEndEditing = {this.hide.bind(this,this.state.value)}
@@ -124,6 +123,7 @@ var styles = StyleSheet.create({
     height:45,
     backgroundColor:'#3497ff',
     borderRadius:4,
+      marginLeft:-6,
   },
   center:{
     justifyContent:'center',
